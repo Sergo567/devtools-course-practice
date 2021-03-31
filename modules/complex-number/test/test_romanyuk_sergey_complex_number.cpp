@@ -37,15 +37,14 @@ TEST(Romanyuk_Sergey_ComplexNumberTesting, Check_Set) {
 
     // Creating buffer and test variables
     ComplexNumber a(true_value.getRe(), true_value.getIm());
-    ComplexNumber b(0.0, 0.0);
+    ComplexNumber b;
 
     // Processing
     b.setRe(a.getRe());
     b.setIm(a.getIm());
 
     // Testing
-    ASSERT_EQ(b.getRe(), true_value.getRe());
-    ASSERT_EQ(b.getIm(), true_value.getIm());
+    ASSERT_EQ(b, true_value);
 }
 
 
