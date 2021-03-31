@@ -1,5 +1,7 @@
 // Copyright 2021 Romanyuk Sergey
+
 #include <gtest/gtest.h>
+
 #include "include/complex_number.h"
 
 TEST(Romanyuk_Sergey_ComplexNumberTesting, Complex_plus_and_multiplication) {
@@ -46,6 +48,3 @@ TEST(Romanyuk_Sergey_ComplexNumberTesting, Check_Set) {
     // Testing
     ASSERT_EQ(b, true_value);
 }
-
-
-
