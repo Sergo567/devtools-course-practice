@@ -10,4 +10,5 @@ class Permutation {
     bool NextSet(int *a, int n);
     int* get_arr(int n);
 };
+
 #endif  // MODULES_PERMUTATION_GENERATOR_INCLUDE_PERMUTATION_H_
