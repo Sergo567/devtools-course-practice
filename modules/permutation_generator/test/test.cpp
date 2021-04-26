@@ -9,10 +9,10 @@ TEST(Permutation_Generate, Test1_value3) {
     a = p.get_arr(n);
 
 
-for (int i = 0; i < 5; i++) {
+for (int i = 0; i < 4; i++) {
     p.NextSet(a, n);
 }
-int res[] = { 3, 2, 1 };
+int res[] = { 3, 1, 2 };
 for (int i = 0; i < 3; i++) {
      ASSERT_EQ(res[i], a[i]);
 }
@@ -80,4 +80,20 @@ int res[] = { 1, 2, 3, 5, 6, 7, 9, 8, 10, 4 };
 for (int i = 0; i < 10; i++) {
      ASSERT_EQ(res[i], a[i]);
 }
+}
+
+TEST(Permutation_Generate, Test6_while) {
+    Permutation p;
+    int n = 3;
+    int *a = new int[n];
+    a = p.get_arr(n);
+
+    for (int i = 0; i < 20; i++) {
+        p.NextSet(a, n);
+    }
+
+    int res[] = { 3, 2, 1};
+    for (int i = 0; i < n; i++) {
+        ASSERT_EQ(res[i], a[i]);
+    }
 }
