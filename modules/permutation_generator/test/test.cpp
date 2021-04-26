@@ -8,7 +8,6 @@ TEST(Permutation_Generate, Test1_value3) {
     int *a = new int[n];
     a = p.get_arr(n);
 
-
 for (int i = 0; i < 4; i++) {
     p.NextSet(a, n);
 }
