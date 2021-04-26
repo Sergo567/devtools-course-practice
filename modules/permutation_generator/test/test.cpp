@@ -9,10 +9,10 @@ TEST(Permutation_Generate, Test1_value3) {
     a = p.get_arr(n);
 
 
-for (int i = 0; i < 4; i++) {
+for (int i = 0; i < 5; i++) {
     p.NextSet(a, n);
 }
-int res[] = { 3, 1, 2 };
+int res[] = { 3, 2, 1 };
 for (int i = 0; i < 3; i++) {
      ASSERT_EQ(res[i], a[i]);
 }
