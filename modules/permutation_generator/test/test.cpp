@@ -107,3 +107,35 @@ TEST(Permutation_Generate, Test6_while) {
         ASSERT_EQ(res[i], a[i]);
     }
 }
+
+TEST(Permutation_Generate, Test7_Parameterized10) {
+    Permutation p;
+    int n = 5;
+    int* test_permutation = new int[n];
+    test_permutation = p.get_arr(n);
+    int* true_permutation = new int[n];
+    true_permutation = p.get_arr(n);
+
+    do {
+        for (int i = 0; i < n; i++) {
+            ASSERT_EQ(true_permutation[i], test_permutation[i]);
+        }
+        p.NextSet(test_permutation, n);
+    } while (std::next_permutation(true_permutation, true_permutation + n));
+}
+
+TEST(Permutation_Generate, Test8_Parameterized15) {
+    Permutation p;
+    int n = 10;
+    int* test_permutation = new int[n];
+    test_permutation = p.get_arr(n);
+    int* true_permutation = new int[n];
+    true_permutation = p.get_arr(n);
+
+    do {
+        for (int i = 0; i < n; i++) {
+            ASSERT_EQ(true_permutation[i], test_permutation[i]);
+        }
+        p.NextSet(test_permutation, n);
+    } while (std::next_permutation(true_permutation, true_permutation + n));
+}
