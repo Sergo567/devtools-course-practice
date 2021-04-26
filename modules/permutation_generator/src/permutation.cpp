@@ -1,5 +1,5 @@
 // Copyright 2021 Romanyuk Sergey
-#include "../include/permutation.h"
+#include "include/permutation.h"
 #include <algorithm>
 #include<iostream>
 
