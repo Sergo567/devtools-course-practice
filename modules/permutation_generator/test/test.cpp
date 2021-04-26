@@ -1,5 +1,6 @@
 // Copyright 2021 Romanyuk Sergey
 #include <gtest/gtest.h>
+#include<tuple>
 #include "include/permutation.h"
 
 TEST(Permutation_Generate, Test1_value3) {
