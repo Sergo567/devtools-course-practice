@@ -139,3 +139,28 @@ TEST(Permutation_Generate, Test8_Parameterized15) {
         p.NextSet(test_permutation, n);
     } while (std::next_permutation(true_permutation, true_permutation + n));
 }
+
+typedef testing::TestWithParam<std::tuple<double, double>>
+Permutation_Generate_Param;
+TEST_P(Permutation_Generate_Param, Test9_Param) {
+    Permutation p;
+
+    int n1 = std::get<0>(GetParam());
+    int n2 = std::get<1>(GetParam());
+
+    int* a = new int[n1];
+    a = p.get_arr(n1);
+
+    int* b = new int[n2];
+    b = p.get_arr(n2);
+
+
+    ASSERT_EQ(true, p.NextSet(a, n1));
+    ASSERT_EQ(true, p.NextSet(b, n2));
+}
+
+INSTANTIATE_TEST_CASE_P(/**/, Permutation_Generate_Param,
+    testing::Combine(
+    testing::Values(2.0, 5.0),
+    testing::Values(6.0, 8.0)
+));
