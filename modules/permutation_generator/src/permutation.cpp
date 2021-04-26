@@ -11,9 +11,7 @@ int* Permutation::get_arr(int n) {
 }
 
 void Permutation::swap(int *a, int i, int j) {
-    int s = a[i];
-    a[i] = a[j];
-    a[j] = s;
+    std::swap(a[j], a[i]);
 }
 
 bool Permutation::NextSet(int *a, int n) {
