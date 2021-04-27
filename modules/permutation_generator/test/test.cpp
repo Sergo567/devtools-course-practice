@@ -50,6 +50,6 @@ TEST_P(Permutation_Generate_Param, Test3_PARAM) {
 }
 
 INSTANTIATE_TEST_CASE_P(/**/, Permutation_Generate_Param, testing::Combine(
-    testing::Values(2, 7, 12),
-    testing::Values(2, 5, 12, 17)
+    testing::Values(2, 3, 5),
+    testing::Values(2, 4, 6, 7)
 ));
