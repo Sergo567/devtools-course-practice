@@ -29,7 +29,7 @@ TEST(Permutation_Generate, Test2_Fact) {
 
 typedef testing::TestWithParam<std::tuple<int, int>>
 Permutation_Generate_Param;
-TEST_P(Permutation_Generate_Param, Test3_PARAMETR) {
+TEST_P(Permutation_Generate_Param, Test3_PARAM) {
     Permutation p;
     int n = std::get<0>(GetParam());
     int iterations = std::get<1>(GetParam());
