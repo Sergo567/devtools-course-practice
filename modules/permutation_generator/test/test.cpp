@@ -54,25 +54,29 @@ TEST(Permutation_Generate, Test3_while) {
     }
 }
 
-typedef testing::TestWithParam<std::tuple<double, double>>
+TEST(Permutation_Generate, Test4_Fact) {
+    Permutation p;
+    int n = 3;
+    int f = 6;
+    int fa = p.fact(n);
+    ASSERT_EQ(f, fa);
+}
+
+typedef testing::TestWithParam<std::tuple<int, int>>
 Permutation_Generate_Param;
-TEST_P(Permutation_Generate_Param, Test4_PARAM) {
+TEST_P(Permutation_Generate_Param, Test5_PARAM) {
     Permutation p;
     int n = std::get<0>(GetParam());
     int iterations = std::get<1>(GetParam());
     if (iterations > p.fact(n)) {
         iterations = p.fact(n);
     }
-    std::cout << "n = "<< n << std::endl;
-    std::cout << "iterations = " << iterations << std::endl;
     int* a = new int[n];
     int* checker = new int[n];
     a = p.get_arr(n);
     checker = p.get_arr(n);
     for (int i = 0; i < iterations; ++i) {
         for (int j = 0; j < n; ++j) {
-            std::cout << "a[j] = " << a[j] << std::endl;
-            std::cout << "checker[j] = " << checker[j] << std::endl;
             ASSERT_EQ(a[j], checker[j]);
         }
         p.NextSet(a, n);
@@ -81,6 +85,6 @@ TEST_P(Permutation_Generate_Param, Test4_PARAM) {
 }
 
 INSTANTIATE_TEST_CASE_P(/**/, Permutation_Generate_Param, testing::Combine(
-    testing::Values(2.0, 7.0),
-    testing::Values(2.0, 12.0)
+    testing::Values(2, 7),
+    testing::Values(2, 12)
 ));

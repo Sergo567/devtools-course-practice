@@ -15,10 +15,11 @@ void Permutation::swap(int *a, int i, int j) {
 }
 
 int Permutation::fact(int N) {
-    if (N == 0) {
-        return 1;
+    int result = 1;
+    for (int i = 1; i < N+1; i++) {
+        result *= i;
     }
-    return N * fact(N - 1);
+    return result;
 }
 
 bool Permutation::NextSet(int *a, int n) {
