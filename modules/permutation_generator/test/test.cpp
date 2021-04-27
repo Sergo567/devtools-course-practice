@@ -54,7 +54,7 @@ TEST(Permutation_Generate, Test3_while) {
     }
 }
 
-typedef testing::TestWithParam<std::tuple<double, double, double>>
+typedef testing::TestWithParam<std::tuple<double, double>>
 Permutation_Generate_Param;
 TEST_P(Permutation_Generate_Param, Test4_PARAM) {
     Permutation p;
