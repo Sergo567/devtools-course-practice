@@ -8,6 +8,7 @@ class Permutation {
  public:
     void swap(int *a, int i, int j);
     bool NextSet(int *a, int n);
+    int fact(int N);
     int* get_arr(int n);
 };
 

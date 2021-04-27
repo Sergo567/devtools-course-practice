@@ -14,6 +14,13 @@ void Permutation::swap(int *a, int i, int j) {
     std::swap(a[j], a[i]);
 }
 
+int Permutation::fact(int N) {
+    if (N == 0) {
+        return 1;
+    }
+    return N * fact(N - 1);
+}
+
 bool Permutation::NextSet(int *a, int n) {
     int j = n - 2;
     while (j != -1 && a[j] >= a[j + 1]) j--;
