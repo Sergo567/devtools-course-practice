@@ -5,8 +5,6 @@
 #include <string>
 #include <sstream>
 #include <utility>
-#include <cmath>
-#include <limits>
 
 #include "include/Application_num_to_word.h"
 #include "include/number_to_word.h"

@@ -12,4 +12,4 @@ set_target_properties(${target} PROPERTIES
 target_link_libraries(${target} ${LIBRARY})
 if (UNIX)
   target_link_libraries(${target} ${CMAKE_THREAD_LIBS_INIT})
-endif (UNIX) 
+endif (UNIX)
